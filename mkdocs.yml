@@ -1,0 +1,60 @@
+site_name: KuretaNone
+strict: false
+use_directory_urls: false
+# TODO: site_url: これを設定しないと静的デプロイしたサイトでは有効にならない
+theme:
+  name: material
+  icon:
+    logo: material/file
+    repo: material/github
+  features:
+    - navigation.instant
+    - navigation.instant.progress
+    - content.code.copy
+  palette:
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      primary: dark-blue  # ライトテーマ時の色
+      toggle:
+        icon: material/weather-night
+        name: ダークモードに切り替え
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      primary: dark blue       # ダークテーマ時の色
+      toggle:
+        icon: material/weather-sunny
+        name: ライトモードに切り替え
+
+plugins:
+  - obsidian-bridge
+  - awesome-nav
+  - glightbox
+  - search:
+      lang: ja
+  - backlinks_section:
+      title: "🖇️ Backlinks"
+      description: ""
+      add_to_toc: false
+      hide_if_empty: true
+  - git-revision-date-localized:
+      strict: false
+      enable_creation_date: true
+      locale: ja
+      timezone: Asia/Tokyo
+
+markdown_extensions:
+  - footnotes
+  - md_in_html
+  - obsidian_callouts
+  - pymdownx.magiclink
+  - pymdownx.snippets:
+      check_paths: true
+      base_path: docs
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+  - pymdownx.tasklist:
+      custom_checkbox: true
+  - pymdownx.tabbed:
+      alternate_style: true
