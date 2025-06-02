@@ -1,11 +1,12 @@
 site_name: KuretaNone
 strict: false
 use_directory_urls: false
-# TODO: site_url: これを設定しないと静的デプロイしたサイトでは有効にならない
+site_url: https://kuretanone.net
 theme:
   name: material
+  favicon: https://pbs.twimg.com/profile_images/1861427904577708032/-ol_T5TU_400x400.jpg
   icon:
-    logo: material/file
+    logo: material/ghost
     repo: material/github
   features:
     - navigation.instant
@@ -32,7 +33,7 @@ plugins:
   - search:
       lang: ja
   - backlinks_section:
-      title: "🖇️ Backlinks"
+      title: "Links to this page"
       description: ""
       add_to_toc: false
       hide_if_empty: true

@@ -1,0 +1,13 @@
+---
+id: Obsidian
+aliases:
+  - Obsidian
+tags: []
+created: "2025-06-01"
+updated: "2025-06-01"
+---
+
+
+# Obsidian
+
+Markdownで記述できるメモソフト。
