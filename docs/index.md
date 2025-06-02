@@ -1,8 +1,6 @@
 ---
 id: index
 aliases:
-  - home
-  - Hellow World
   - KuretaNone.netへようこそ
 tags: []
 created: "2025-05-28"
@@ -27,7 +25,7 @@ updated: "2025-05-28"
 
 ## 最近作成した記事
 
-- [[生き恥をさらす場所を作ろう]]
-- [[Mkdocsを使ってサイトを作ろう]]
+- [[生き恥をさらす場所を作る]]
+- [[MkDocsを使ってサイトを作る]]
 - [[KuretaNoneで解決したい問題]]
 - [[Build時の警告を解決する]]

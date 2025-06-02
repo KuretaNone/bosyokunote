@@ -1,5 +1,5 @@
 site_name: KuretaNone
-strict: false
+strict: true
 use_directory_urls: false
 site_url: https://kuretanone.net
 theme:

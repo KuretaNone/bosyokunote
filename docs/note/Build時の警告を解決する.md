@@ -20,7 +20,7 @@ updated: "2025-06-01"
 
 ```bash
 WARNING:root:First revision timestamp is older than last revision timestamp for page memo\IPアドレス.md. This can be due to a quirk in `git` follow behaviour. You can try to set `enable_git_follow: false` in the plugin configuration.
-WARNING:root:First revision timestamp is older than last revision timestamp for page memo\LYT.md. This can be due to a quirk in `git` follow behaviour. You can try to set `enable_git_follow: false` in the plugin configuration.
+WARNING:root:First revision timestamp is older than last revision timestamp for page memo\LYT.md. This can be due to a quirk in `git` follow behaviour. You can try to set `enable_git_follow: false` in the plugin configuration.プログラミング言語Bu
 WARNING:root:First revision timestamp is older than last revision timestamp for page memo\LaTeX.md. This can be due to a quirk in `git` follow behaviour. You can try to set `enable_git_follow: false` in the plugin configuration.
 WARNING -  [ObsidianBridgePlugin] Unable to find HTML.md in directory D:\KuretaNone\docs
 WARNING -  [ObsidianBridgePlugin] Unable to find CSS.md in directory D:\KuretaNone\docs
@@ -315,7 +315,7 @@ WARNING:root:First revision timestamp is older than last revision timestamp for 
 ## AIの解説を受けて
 
 infoは僕の怠慢による[[デッドリンク]]なのでその単語の自分の理解をするmemoを作成すればいいのですね。
-これは[[Kure[[KuretaNoneで解決したい問題]]にも書いてある問題です。
+これは[[KuretaNoneで解決したい問題]]にも書いてある問題です。
 
 ほかの二つもリンク切れ関連っぽいですね
 
@@ -329,7 +329,7 @@ infoは僕の怠慢による[[デッドリンク]]なのでその単語の自分
 
 [[デッドリンク]]は気合でどうにかします…なんか説明しようとすると壮大なコンテンツだと大変だよね。
 
-gitの方は最初に[[Mkdocsを使ってサイトを作る]]時に最初にコミットしていこう一度も差分を取ってない私の怠慢が原因ですね。
+gitの方は最初に[[MkDocsを使ってサイトを作る]]時に最初にコミットしていこう一度も差分を取ってない私の怠慢が原因ですね。
 
 [[lazygit]]を使用しているのでこちらでコミットしていきましょう
 
@@ -421,3 +421,132 @@ WARNING -  [ObsidianBridgePlugin] Unable to find 静的サイト.md in directory
 timestampに関する警告は出てこなくなりましたね☻
 
 次に、リンク先が見つからないのを必死に解決します。
+
+今度は全文見ていきましょう。
+<details>
+<summary>全文</summary>
+
+```bash
+INFO    -  [22:52:00] Detected file changes
+INFO    -  Building documentation...
+INFO    -  The following pages exist in the docs directory, but are not included in the "nav" configuration:
+             - memo\Build時の警告を解決する.md
+             - memo\Git.md
+             - memo\HTML.md
+             - memo\IPアドレス.md
+             - memo\JavaScript.md
+             - memo\LYT.md
+             - memo\LaTeX.md
+             - memo\Markdown.md
+             - memo\MarkdownからPDF変換時に改ページを挿入.md
+             - memo\Microsoft.md
+             - memo\MkDocs.md
+             - memo\Neovim.md
+             - memo\Obsidian.md
+             - memo\PDF.md
+             - memo\PKM.md
+             - memo\PowerShell.md
+             - memo\Python.md
+             - memo\TeX.md
+             - memo\Unix.md
+             - memo\WinScp.md
+             - memo\XServer.md
+             - memo\YAML.md
+             - memo\Zettelkasten.md
+             - memo\css.md
+             - memo\fork.md
+             - memo\lazygit.md
+             - memo\macOS.md
+             - memo\obsidian.nvim.md
+             - memo\os.md
+             - memo\vim.md
+             - memo\windows.md
+             - memo\アラート記法.md
+             - memo\サイト.md
+             - memo\サーバー.md
+             - memo\ソフトウェア.md
+             - memo\デッドリンク.md
+             - memo\ドメイン.md
+             - memo\ハードウェア.md
+             - memo\ファイル内リンクを設定する.md
+             - memo\マークアップ言語.md
+             - memo\折り畳みを挿入する.md
+             - memo\数式(LaTeX)を表現する.md
+             - memo\暮田のん.md
+             - memo\画像がresフォルダに保存されない.md
+             - memo\組版.md
+             - memo\表のalignを指定する.md
+WARNING -  [ObsidianBridgePlugin] Unable to find Mkdocsを使ってサイトを作ろう.md in directory D:\KuretaNone\docs
+INFO    -  Doc file 'index.md' contains an unrecognized relative link 'Mkdocs%E3%82%92%E4%BD%BF%E3%81%A3%E3%81%A6%E3%82%B5%E3%82%A4%E3%83%88%E3%82%92%E4%BD%9C%E3%82%8D%E3%81%86', it was left as is.
+WARNING -  [ObsidianBridgePlugin] Unable to find Kure[[KuretaNoneで解決したい問題.md in directory D:\KuretaNone\docs
+WARNING -  [ObsidianBridgePlugin] Unable to find Mkdocsを使ってサイトを作る.md in directory D:\KuretaNone\docs
+WARNING -  [ObsidianBridgePlugin] Unable to find GitHub.md in directory D:\KuretaNone\docs
+INFO    -  Doc file 'memo/Build時の警告を解決する.md' contains an unrecognized relative link 'Kure%5B%5BKuretaNone%E3%81%A7%E8%A7%A3%E6%B1%BA%E3%81%97%E3%81%9F%E3%81%84%E5%95%8F%E9%A1%8C', it was left as is.
+INFO    -  Doc file 'memo/Build時の警告を解決する.md' contains an unrecognized relative link 'Mkdocs%E3%82%92%E4%BD%BF%E3%81%A3%E3%81%A6%E3%82%B5%E3%82%A4%E3%83%88%E3%82%92%E4%BD%9C%E3%82%8B', it was left as is.
+INFO    -  Doc file 'memo/Build時の警告を解決する.md' contains an unrecognized relative link 'GitHub', it was left as is.
+WARNING -  [ObsidianBridgePlugin] Unable to find プログラミング言語.md in directory D:\KuretaNone\docs
+INFO    -  Doc file 'memo/JavaScript.md' contains an unrecognized relative link '%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%9F%E3%83%B3%E3%82%B0%E8%A8%80%E8%AA%9E', it was left as is.
+WARNING -  [ObsidianBridgePlugin] Unable to find CSS.md in directory D:\KuretaNone\docs
+INFO    -  Doc file 'memo/Markdown.md' contains an unrecognized relative link 'CSS', it was left as is.
+WARNING -  [ObsidianBridgePlugin] Unable to find 静的サイト.md in directory D:\KuretaNone\docs
+INFO    -  Doc file 'memo/MkDocs.md' contains an unrecognized relative link '%E9%9D%99%E7%9A%84%E3%82%B5%E3%82%A4%E3%83%88', it was left as is.
+WARNING -  [ObsidianBridgePlugin] Unable to find コマンドラインシェル.md in directory D:\KuretaNone\docs
+WARNING -  [ObsidianBridgePlugin] Unable to find スクリプト言語.md in directory D:\KuretaNone\docs
+WARNING -  [ObsidianBridgePlugin] Unable to find Linux.md in directory D:\KuretaNone\docs
+INFO    -  Doc file 'memo/PowerShell.md' contains an unrecognized relative link '%E3%82%B3%E3%83%9E%E3%83%B3%E3%83%89%E3%83%A9%E3%82%A4%E3%83%B3%E3%82%B7%E3%82%A7%E3%83%AB', it was left as is.
+INFO    -  Doc file 'memo/PowerShell.md' contains an unrecognized relative link '%E3%82%B9%E3%82%AF%E3%83%AA%E3%83%97%E3%83%88%E8%A8%80%E8%AA%9E', it was left as is.
+INFO    -  Doc file 'memo/PowerShell.md' contains an unrecognized relative link 'Linux', it was left as is.
+WARNING -  [ObsidianBridgePlugin] Unable to find TUI.md in directory D:\KuretaNone\docs
+INFO    -  Doc file 'memo/lazygit.md' contains an unrecognized relative link 'TUI', it was left as is.
+WARNING -  [ObsidianBridgePlugin] Unable to find OS.md in directory D:\KuretaNone\docs
+WARNING -  [ObsidianBridgePlugin] Unable to find OS.md in directory D:\KuretaNone\docs
+INFO    -  Doc file 'memo/macOS.md' contains an unrecognized relative link 'OS', it was left as is.
+INFO    -  Doc file 'memo/macOS.md' contains an unrecognized relative link 'OS', it was left as is.
+WARNING -  [ObsidianBridgePlugin] Unable to find obsidian.md in directory D:\KuretaNone\docs
+INFO    -  Doc file 'memo/obsidian.nvim.md' contains an unrecognized relative link 'obsidian', it was left as is.
+WARNING -  [ObsidianBridgePlugin] Unable to find html.md in directory D:\KuretaNone\docs
+INFO    -  Doc file 'memo/マークアップ言語.md' contains an unrecognized relative link 'html', it was left as is.
+WARNING -  [ObsidianBridgePlugin] Unable to find Obsidian.nvim.md in directory D:\KuretaNone\docs
+WARNING -  [ObsidianBridgePlugin] Unable to find neovim.md in directory D:\KuretaNone\docs
+WARNING -  [ObsidianBridgePlugin] Unable to find git.md in directory D:\KuretaNone\docs
+WARNING -  [ObsidianBridgePlugin] Unable to find markdown.md in directory D:\KuretaNone\docs
+WARNING -  [ObsidianBridgePlugin] Unable to find KuretaNone.net.md in directory D:\KuretaNone\docs
+WARNING -  Doc file 'note/MkDocsを使ってサイトを作る.md' contains a link 'Obsidian.nvim', but the target 'note/Obsidian.nvim' is not found among documentation files.
+INFO    -  Doc file 'note/MkDocsを使ってサイトを作る.md' contains an unrecognized relative link 'neovim', it was left as is.
+INFO    -  Doc file 'note/MkDocsを使ってサイトを作る.md' contains an unrecognized relative link 'git', it was left as is.
+INFO    -  Doc file 'note/MkDocsを使ってサイトを作る.md' contains an unrecognized relative link 'markdown', it was left as is.
+WARNING -  Doc file 'note/MkDocsを使ってサイトを作る.md' contains a link 'KuretaNone.net', but the target 'note/KuretaNone.net' is not found among documentation files.
+WARNING -  [ObsidianBridgePlugin] Unable to find Xserver.md in directory D:\KuretaNone\docs
+INFO    -  Doc file 'note/サーバー管理画面からFTPアカウントの設定をする.md' contains an unrecognized relative link 'Xserver', it was left as is.
+WARNING -  [ObsidianBridgePlugin] Unable to find KuretaNone.net.md in directory D:\KuretaNone\docs
+WARNING -  [ObsidianBridgePlugin] Unable to find KuretaNone.net.md in directory D:\KuretaNone\docs
+WARNING -  [ObsidianBridgePlugin] Unable to find KuretaNone.net.md in directory D:\KuretaNone\docs
+WARNING -  [ObsidianBridgePlugin] Unable to find html.md in directory D:\KuretaNone\docs
+WARNING -  [ObsidianBridgePlugin] Unable to find javascript.md in directory D:\KuretaNone\docs
+WARNING -  [ObsidianBridgePlugin] Unable to find KuretaNone.net.md in directory D:\KuretaNone\docs
+WARNING -  Doc file 'note/生き恥をさらす場所を作ろう.md' contains a link 'KuretaNone.net', but the target 'note/KuretaNone.net' is not found among documentation files.
+WARNING -  Doc file 'note/生き恥をさらす場所を作ろう.md' contains a link 'KuretaNone.net', but the target 'note/KuretaNone.net' is not found among documentation files.
+WARNING -  Doc file 'note/生き恥をさらす場所を作ろう.md' contains a link 'KuretaNone.net', but the target 'note/KuretaNone.net' is not found among documentation files.
+INFO    -  Doc file 'note/生き恥をさらす場所を作ろう.md' contains an unrecognized relative link 'html', it was left as is.
+INFO    -  Doc file 'note/生き恥をさらす場所を作ろう.md' contains an unrecognized relative link 'javascript', it was left as is.
+WARNING -  Doc file 'note/生き恥をさらす場所を作ろう.md' contains a link 'KuretaNone.net', but the target 'note/KuretaNone.net' is not found among documentation files.
+INFO    -  Documentation built in 6.78 seconds
+INFO    -  [22:52:07] Reloading browsers
+```
+
+う～～～～これは、リンク切れ、というより大文字小文字の違いっぽいですね。厳密に書いていきましょうか。
+あとはnavにメモフォルダを指定してないので、追加しておきます(単語の羅列は正直邪魔かなって思うので、含めていませんでした。)
+`.`が含まれるファイルに関しては現在もどうやって解決すればいいのかわからないので、いったん保留
+
+## まとめ
+
+文章を書くときの僕のいい加減さがわかるいい例でしたね。
+
+ちなみに、`mkdocs.yml`の設定で`strict: true`にしておくと`mkdocs build`の時にリンク切れを検出してくれるので、そちらを有効にしておくといいでしょう。
+
+> [!NOTE]
+> 最初'mkdocs serve'実行時にエラーで止まってばかりで、[[MkDocs]]を使用したときの雰囲気がわからなったでfalseにしてた。
+
+```yaml
+strict: true
+```

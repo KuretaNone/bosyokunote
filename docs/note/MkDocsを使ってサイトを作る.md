@@ -1,23 +1,14 @@
 ---
 id: MkDocsを使ってサイトを作る
-aliases:
-  - MkDocsを使ってサイトを作る
+aliases: []
 tags: []
-created: "2025-05-30"
-updated: "2025-05-30"
+created: "2025-06-02"
+updated: "2025-06-02"
 ---
-
-- [~] # MkDocsを使ってサイトを作る
-
-最近は、業務でもプライベートでも[[Obsidian.nvim]]を使ってメモとっています。
-
-[[Markdown]]で書けるのと、`[[`を入力すれば単語補完で別ノートへのリンクが挿入できるので、**ちょっとしたプログラムを書く気分**で文章が作成できます。
-
-----
 
 ![こんな感じで単語の補完候補が出てくる](res/1748665975.png)
 
-[[neovim]]上での単語補完
+[[Neovim]]上での単語補完
 
 ---
 
@@ -49,7 +40,7 @@ updated: "2025-05-30"
 
 ## 前提
 
-- [[git]]
+- [[Git]]
 - [[Python]] 
 
 上記がインストールされていること。
@@ -58,7 +49,7 @@ updated: "2025-05-30"
 
 細かい設定を羅列しても[MkDocsでObsidianと互換性の高いドキュメントベースを実現する](https://minerva.mamansoft.net/%F0%9F%93%98Articles/%F0%9F%93%98MkDocs%E3%81%A7Obsidian%E3%81%A8%E4%BA%92%E6%8F%9B%E6%80%A7%E3%81%AE%E9%AB%98%E3%81%84%E3%83%89%E3%82%AD%E3%83%A5%E3%83%A1%E3%83%B3%E3%83%88%E3%83%99%E3%83%BC%E3%82%B9%E3%82%92%E5%AE%9F%E7%8F%BE%E3%81%99%E3%82%8B)の二の舞になるので、詳細はこちらを参考してください。
 
-以下を`.ps1`で保存し[[PowerShell]]から実行をすれば[[windows]]でも、環境構築ができます。
+以下を`.ps1`で保存し[[PowerShell]]から実行をすれば[[Windows]]でも、環境構築ができます。
 
 ```powershell
 Set-StrictMode -Version Latest
@@ -172,7 +163,7 @@ pip install -r requirements.txt
 
 ## 作成したMarkdownをMkDocsでHTMLに変換する
 
-先ほどのスクリプトを実行すると、`docs`フォルダが作成されます。そこに[[markdown]]ファイルを配置していきます。
+先ほどのスクリプトを実行すると、`docs`フォルダが作成されます。そこに[[Markdown]]ファイルを配置していきます。
 
 ファイルを配置したら、以下のコマンドを実行します。
 
@@ -201,4 +192,4 @@ mkdocs build
 
 [[MkDocs]]を使うことで、[[Markdown]]で書いたメモを簡単に[[HTML]]に変換して、[[サーバー]]にアップロードすることができました。
 
-[[KuretaNone.net]]はこのようにして作成をしています。
+KuretaNone.netはこのようにして作成をしています。

@@ -1,10 +1,13 @@
 ---
-id: css
+id: CSS
 aliases:
-  - css
+  - CSS
 tags: []
 created: "2025-05-30"
 updated: "2025-05-30"
 ---
 
-# css
+# CSS
+
+Cascading Style Sheetsの略。
+ウェブサイトの見た目を整えるための言語

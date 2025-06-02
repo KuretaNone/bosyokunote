@@ -9,4 +9,4 @@ updated: "2025-06-01"
 
 # obsidian.nvim
 
-[[Neovim]]の拡張機能の一つ。[[Neovim]]内で[[obsidian]]のような操作ができる。
+[[Neovim]]の拡張機能の一つ。[[Neovim]]内で[[Obsidian]]のような操作ができる。

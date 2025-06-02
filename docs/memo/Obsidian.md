@@ -10,4 +10,4 @@ updated: "2025-06-01"
 
 # Obsidian
 
-Markdownで記述できるメモソフト。
+[[Markdown]]で記述できるメモソフト。
