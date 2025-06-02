@@ -1,10 +1,11 @@
 ---
-id: XServer
+id: Xserver
 aliases:
+  - Xserver
   - XServer
 tags: []
-created: "2025-05-30"
-updated: "2025-05-30"
+created: "2025-06-02"
+updated: "2025-06-02"
 ---
 
 # XServer

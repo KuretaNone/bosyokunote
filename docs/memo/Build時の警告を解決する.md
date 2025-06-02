@@ -333,4 +333,91 @@ gitの方は最初に[[Mkdocsを使ってサイトを作る]]時に最初にコ�
 
 [[lazygit]]を使用しているのでこちらでコミットしていきましょう
 
+![1748870040.png](res/1748870040.png)
 
+本当は[[GitHub]]のプライベートリポジトリとかにプッシュしておく方がいいですね。
+
+これはまたいつの日か…
+
+## 実践
+
+さっきの画像でわかる通り、いったんGitに差分をコミットしてみました。
+
+<details>
+<summary>整理ソートしたログ</summary>
+
+```bash
+INFO    -  Doc file 'index.md' contains an unrecognized relative link 'Mkdocs%E3%82%92%E4%BD%BF%E3%81%A3%E3%81%A6%E3%82%B5%E3%82%A4%E3%83%88%E3%82%92%E4%BD%9C%E3%82%8D%E3%81%86', it was left as is.
+INFO    -  Doc file 'memo/Build時の警告を解決する.md' contains an unrecognized relative link 'Kure%5B%5BKuretaNone%E3%81%A7%E8%A7%A3%E6%B1%BA%E3%81%97%E3%81%9F%E3%81%84%E5%95%8F%E9%A1%8C', it was left as is.
+INFO    -  Doc file 'memo/Build時の警告を解決する.md' contains an unrecognized relative link 'Mkdocs%E3%82%92%E4%BD%BF%E3%81%A3%E3%81%A6%E3%82%B5%E3%82%A4%E3%83%88%E3%82%92%E4%BD%9C%E3%82%8B', it was left as is.
+INFO    -  Doc file 'memo/Build時の警告を解決する.md' contains an unrecognized relative link 'lazygit', it was left as is.
+INFO    -  Doc file 'memo/Markdown.md' contains an unrecognized relative link '%E3%83%95%E3%82%A1%E3%82%A4%E3%83%AB%E5%86%85%E3%83%AA%E3%83%B3%E3%82%AF%E3%82%92%E8%A8%AD%E5%AE%9A%E3%81%99%E3%82%8B', it was left as is.
+INFO    -  Doc file 'memo/Markdown.md' contains an unrecognized relative link '%E8%A1%A8%E3%81%AEalign%E3%82%92%E6%8C%87%E5%AE%9A%E3%81%99%E3%82%8B', it was left as is.
+INFO    -  Doc file 'memo/Markdown.md' contains an unrecognized relative link 'CSS', it was left as is.
+INFO    -  Doc file 'memo/Markdown.md' contains an unrecognized relative link 'HTML', it was left as is.
+INFO    -  Doc file 'memo/MkDocs.md' contains an unrecognized relative link '%E9%9D%99%E7%9A%84%E3%82%B5%E3%82%A4%E3%83%88', it was left as is. WARNING -  [ObsidianBridgePlugin] Unable to find コマンドラインシェル.md in directory D:\KuretaNone\docs WARNING -  [ObsidianBridgePlugin] Unable to find スクリプト言語.md in directory D:\KuretaNone\docs
+INFO    -  Doc file 'memo/MkDocs.md' contains an unrecognized relative link 'Python', it was left as is.
+INFO    -  Doc file 'memo/PowerShell.md' contains an unrecognized relative link '%E3%82%B3%E3%83%9E%E3%83%B3%E3%83%89%E3%83%A9%E3%82%A4%E3%83%B3%E3%82%B7%E3%82%A7%E3%83%AB', it was left as is.
+INFO    -  Doc file 'memo/PowerShell.md' contains an unrecognized relative link '%E3%82%B9%E3%82%AF%E3%83%AA%E3%83%97%E3%83%88%E8%A8%80%E8%AA%9E', it was left as is.
+INFO    -  Doc file 'memo/PowerShell.md' contains an unrecognized relative link 'Linux', it was left as is.
+INFO    -  Doc file 'memo/PowerShell.md' contains an unrecognized relative link 'macOS', it was left as is.
+INFO    -  Doc file 'memo/obsidian.nvim.md' contains an unrecognized relative link 'obsidian', it was left as is.
+INFO    -  Doc file 'memo/windows.md' contains an unrecognized relative link 'OS', it was left as is.
+INFO    -  Doc file 'memo/マークアップ言語.md' contains an unrecognized relative link 'html', it was left as is.
+INFO    -  Doc file 'note/MkDocsを使ってサイトを作る.md' contains an unrecognized relative link 'HTML', it was left as is.
+INFO    -  Doc file 'note/MkDocsを使ってサイトを作る.md' contains an unrecognized relative link 'HTML', it was left as is.
+INFO    -  Doc file 'note/MkDocsを使ってサイトを作る.md' contains an unrecognized relative link 'HTML', it was left as is.
+INFO    -  Doc file 'note/MkDocsを使ってサイトを作る.md' contains an unrecognized relative link 'HTML', it was left as is.
+INFO    -  Doc file 'note/MkDocsを使ってサイトを作る.md' contains an unrecognized relative link 'Python', it was left as is.
+INFO    -  Doc file 'note/MkDocsを使ってサイトを作る.md' contains an unrecognized relative link 'git', it was left as is.
+INFO    -  Doc file 'note/MkDocsを使ってサイトを作る.md' contains an unrecognized relative link 'markdown', it was left as is.
+INFO    -  Doc file 'note/MkDocsを使ってサイトを作る.md' contains an unrecognized relative link 'neovim', it was left as is.
+INFO    -  Doc file 'note/サーバー管理画面からFTPアカウントの設定をする.md' contains an unrecognized relative link 'Xserver', it was left as is.
+INFO    -  Doc file 'note/生き恥をさらす場所を作ろう.md' contains an unrecognized relative link 'html', it was left as is.
+INFO    -  Doc file 'note/生き恥をさらす場所を作ろう.md' contains an unrecognized relative link 'javascript', it was left as is.
+WARNING -  Doc file 'note/MkDocsを使ってサイトを作る.md' contains a link 'KuretaNone.net', but the target 'note/KuretaNone.net' is not found among documentation files.
+WARNING -  Doc file 'note/MkDocsを使ってサイトを作る.md' contains a link 'Obsidian.nvim', but the target 'note/Obsidian.nvim' is not found among documentation files.
+WARNING -  Doc file 'note/生き恥をさらす場所を作ろう.md' contains a link 'KuretaNone.net', but the target 'note/KuretaNone.net' is not found among documentation files.
+WARNING -  Doc file 'note/生き恥をさらす場所を作ろう.md' contains a link 'KuretaNone.net', but the target 'note/KuretaNone.net' is not found among documentation files.
+WARNING -  Doc file 'note/生き恥をさらす場所を作ろう.md' contains a link 'KuretaNone.net', but the target 'note/KuretaNone.net' is not found among documentation files.
+WARNING -  Doc file 'note/生き恥をさらす場所を作ろう.md' contains a link 'KuretaNone.net', but the target 'note/KuretaNone.net' is not found among documentation files.
+WARNING -  [ObsidianBridgePlugin] Unable to find CSS.md in directory D:\KuretaNone\docs
+WARNING -  [ObsidianBridgePlugin] Unable to find HTML.md in directory D:\KuretaNone\docs
+WARNING -  [ObsidianBridgePlugin] Unable to find HTML.md in directory D:\KuretaNone\docs
+WARNING -  [ObsidianBridgePlugin] Unable to find HTML.md in directory D:\KuretaNone\docs
+WARNING -  [ObsidianBridgePlugin] Unable to find HTML.md in directory D:\KuretaNone\docs
+WARNING -  [ObsidianBridgePlugin] Unable to find HTML.md in directory D:\KuretaNone\docs
+WARNING -  [ObsidianBridgePlugin] Unable to find Kure[[KuretaNoneで解決したい問題.md in directory D:\KuretaNone\docs
+WARNING -  [ObsidianBridgePlugin] Unable to find KuretaNone.net.md in directory D:\KuretaNone\docs
+WARNING -  [ObsidianBridgePlugin] Unable to find KuretaNone.net.md in directory D:\KuretaNone\docs
+WARNING -  [ObsidianBridgePlugin] Unable to find KuretaNone.net.md in directory D:\KuretaNone\docs
+WARNING -  [ObsidianBridgePlugin] Unable to find KuretaNone.net.md in directory D:\KuretaNone\docs
+WARNING -  [ObsidianBridgePlugin] Unable to find KuretaNone.net.md in directory D:\KuretaNone\docs
+WARNING -  [ObsidianBridgePlugin] Unable to find Linux.md in directory D:\KuretaNone\docs
+WARNING -  [ObsidianBridgePlugin] Unable to find Mkdocsを使ってサイトを作る.md in directory D:\KuretaNone\docs
+WARNING -  [ObsidianBridgePlugin] Unable to find Mkdocsを使ってサイトを作ろう.md in directory D:\KuretaNone\docs
+WARNING -  [ObsidianBridgePlugin] Unable to find OS.md in directory D:\KuretaNone\docs
+WARNING -  [ObsidianBridgePlugin] Unable to find Obsidian.nvim.md in directory D:\KuretaNone\docs
+WARNING -  [ObsidianBridgePlugin] Unable to find Python.md in directory D:\KuretaNone\docs
+WARNING -  [ObsidianBridgePlugin] Unable to find Python.md in directory D:\KuretaNone\docs
+WARNING -  [ObsidianBridgePlugin] Unable to find Xserver.md in directory D:\KuretaNone\docs
+WARNING -  [ObsidianBridgePlugin] Unable to find YAML.md in directory D:\KuretaNone\docs
+WARNING -  [ObsidianBridgePlugin] Unable to find git.md in directory D:\KuretaNone\docs
+WARNING -  [ObsidianBridgePlugin] Unable to find html.md in directory D:\KuretaNone\docs
+WARNING -  [ObsidianBridgePlugin] Unable to find html.md in directory D:\KuretaNone\docs
+WARNING -  [ObsidianBridgePlugin] Unable to find javascript.md in directory D:\KuretaNone\docs
+WARNING -  [ObsidianBridgePlugin] Unable to find lazygit.md in directory D:\KuretaNone\docs
+WARNING -  [ObsidianBridgePlugin] Unable to find macOS.md in directory D:\KuretaNone\docs
+WARNING -  [ObsidianBridgePlugin] Unable to find markdown.md in directory D:\KuretaNone\docs
+WARNING -  [ObsidianBridgePlugin] Unable to find neovim.md in directory D:\KuretaNone\docs
+WARNING -  [ObsidianBridgePlugin] Unable to find obsidian.md in directory D:\KuretaNone\docs
+WARNING -  [ObsidianBridgePlugin] Unable to find ファイル内リンクを設定する.md in directory D:\KuretaNone\docs
+WARNING -  [ObsidianBridgePlugin] Unable to find 表のalignを指定する.md in directory D:\KuretaNone\docs
+WARNING -  [ObsidianBridgePlugin] Unable to find 静的サイト.md in directory D:\KuretaNone\docs
+```
+
+</details>
+
+timestampに関する警告は出てこなくなりましたね☻
+
+次に、リンク先が見つからないのを必死に解決します。
