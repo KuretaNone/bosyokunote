@@ -2,13 +2,12 @@
 id: Build時の警告を解決する
 aliases:
   - Build時の警告を解決する
-  - MkDocs Buildのエラーを解決する
 tags: []
 created: "2025-06-01"
 updated: "2025-06-01"
 ---
 
-# MkDocs Buildのエラーを解決する
+# Build時の警告を解決する
 
 [[MkDocs]]で`Build`コマンドを実行したとき、以下のようにログが出力されます。
 
@@ -315,6 +314,7 @@ WARNING:root:First revision timestamp is older than last revision timestamp for 
 ## AIの解説を受けて
 
 infoは僕の怠慢による[[デッドリンク]]なのでその単語の自分の理解をするmemoを作成すればいいのですね。
+
 これは[[KuretaNoneで解決したい問題]]にも書いてある問題です。
 
 ほかの二つもリンク切れ関連っぽいですね
@@ -534,8 +534,12 @@ INFO    -  Documentation built in 6.78 seconds
 INFO    -  [22:52:07] Reloading browsers
 ```
 
+</details>
+
 う～～～～これは、リンク切れ、というより大文字小文字の違いっぽいですね。厳密に書いていきましょうか。
+
 あとはnavにメモフォルダを指定してないので、追加しておきます(単語の羅列は正直邪魔かなって思うので、含めていませんでした。)
+
 `.`が含まれるファイルに関しては現在もどうやって解決すればいいのかわからないので、いったん保留
 
 ![1748881315.png](res/1748881315.png)
