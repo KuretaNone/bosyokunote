@@ -22,7 +22,7 @@
     
     
       
-        <title>MkDocs Buildのエラーを解決する - KuretaNone</title>
+        <title>Build時の警告を解決する - KuretaNone</title>
       
     
     
@@ -83,7 +83,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#mkdocs-build" class="md-skip">
+        <a href="#build" class="md-skip">
           Skip to content
         </a>
       
@@ -119,7 +119,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              MkDocs Buildのエラーを解決する
+              Build時の警告を解決する
             
           </span>
         </div>
@@ -317,7 +317,7 @@
   
   
   <span class="md-ellipsis">
-    MkDocs Buildのエラーを解決する
+    Build時の警告を解決する
     
   </span>
   
@@ -330,7 +330,7 @@
   
   
   <span class="md-ellipsis">
-    MkDocs Buildのエラーを解決する
+    Build時の警告を解決する
     
   </span>
   
@@ -425,6 +425,15 @@
   <a href="#_3" class="md-nav__link">
     <span class="md-ellipsis">
       実践
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      まとめ
     </span>
   </a>
   
@@ -1929,6 +1938,15 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      まとめ
+    </span>
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -1945,7 +1963,7 @@
 
 
 
-<h1 id="mkdocs-build">MkDocs Buildのエラーを解決する</h1>
+<h1 id="build">Build時の警告を解決する</h1>
 <p><a href="../memo/MkDocs.html">MkDocs</a>で<code>Build</code>コマンドを実行したとき、以下のようにログが出力されます。</p>
 <p>いくつかWARNIGが出力されているので、これらを極力解決していきます。</p>
 <details>
@@ -2229,8 +2247,8 @@ WARNING:root:First<span class="w"> </span>revision<span class="w"> </span>timest
 <li><code>mkdocs.yml</code> のプラグイン設定で <code>enable_git_follow: false</code> を指定して <code>--follow</code> の使用を無効にすることで解消できる場合があります。</li>
 </ul>
 <h2 id="ai">AIの解説を受けて</h2>
-<p>infoは僕の怠慢による<a href="../memo/%E3%83%87%E3%83%83%E3%83%89%E3%83%AA%E3%83%B3%E3%82%AF.html">デッドリンク</a>なのでその単語の自分の理解をするmemoを作成すればいいのですね。
-これは<a href="KuretaNone%E3%81%A7%E8%A7%A3%E6%B1%BA%E3%81%97%E3%81%9F%E3%81%84%E5%95%8F%E9%A1%8C.html">KuretaNoneで解決したい問題</a>にも書いてある問題です。</p>
+<p>infoは僕の怠慢による<a href="../memo/%E3%83%87%E3%83%83%E3%83%89%E3%83%AA%E3%83%B3%E3%82%AF.html">デッドリンク</a>なのでその単語の自分の理解をするmemoを作成すればいいのですね。</p>
+<p>これは<a href="KuretaNone%E3%81%A7%E8%A7%A3%E6%B1%BA%E3%81%97%E3%81%9F%E3%81%84%E5%95%8F%E9%A1%8C.html">KuretaNoneで解決したい問題</a>にも書いてある問題です。</p>
 <p>ほかの二つもリンク切れ関連っぽいですね</p>
 <p>最後だけ、Gitプラグインが関連してるみたいです。</p>
 <p>こういう時に自分にある程度最初に環境が出来上がっているものを使用するとなんのためのプラグインかわからなくなりますよね。</p>
@@ -2431,32 +2449,25 @@ INFO<span class="w">    </span>-<span class="w">  </span>Documentation<span clas
 INFO<span class="w">    </span>-<span class="w">  </span><span class="o">[</span><span class="m">22</span>:52:07<span class="o">]</span><span class="w"> </span>Reloading<span class="w"> </span>browsers
 </code></pre></div>
 
-う～～～～これは、リンク切れ、というより大文字小文字の違いっぽいですね。厳密に書いていきましょうか。
-あとはnavにメモフォルダを指定してないので、追加しておきます(単語の羅列は正直邪魔かなって思うので、含めていませんでした。)
-`.`が含まれるファイルに関しては現在もどうやって解決すればいいのかわからないので、いったん保留
+</details>
 
-![1748881315.png](../res/1748881315.png)
-
-最終的にここまでWarnigが減りました。
-
-プログラムのリファクタリングのような気持ちになりました。
-
-普段扱ってる言語が大文字と小文字を区別しないので、こういうのは気を付けていいきたいですね。
-
-## まとめ
-
-文章を書くときの僕のいい加減さがわかるいい例でしたね。
-
-ちなみに、`mkdocs.yml`の設定で`strict: true`にしておくと`mkdocs build`の時にリンク切れを検出してくれるので、そちらを有効にしておくといいでしょう。
-
-> [!NOTE]
-> 最初'mkdocs serve'実行時にエラーで止まってばかりで、[MkDocs](../memo/MkDocs.md)を使用したときの雰囲気がわからなったでfalseにしてた。
-
+<p>う～～～～これは、リンク切れ、というより大文字小文字の違いっぽいですね。厳密に書いていきましょうか。</p>
+<p>あとはnavにメモフォルダを指定してないので、追加しておきます(単語の羅列は正直邪魔かなって思うので、含めていませんでした。)</p>
+<p><code>.</code>が含まれるファイルに関しては現在もどうやって解決すればいいのかわからないので、いったん保留</p>
+<p><a class="glightbox" href="../res/1748881315.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="1748881315.png" src="../res/1748881315.png" /></a></p>
+<p>最終的にここまでWarnigが減りました。</p>
+<p>プログラムのリファクタリングのような気持ちになりました。</p>
+<p>普段扱ってる言語が大文字と小文字を区別しないので、こういうのは気を付けていいきたいですね。</p>
+<h2 id="_4">まとめ</h2>
+<p>文章を書くときの僕のいい加減さがわかるいい例でしたね。</p>
+<p>ちなみに、<code>mkdocs.yml</code>の設定で<code>strict: true</code>にしておくと<code>mkdocs build</code>の時にリンク切れを検出してくれるので、そちらを有効にしておくといいでしょう。</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>最初'mkdocs serve'実行時にエラーで止まってばかりで、<a href="../memo/MkDocs.html">MkDocs</a>を使用したときの雰囲気がわからなったでfalseにしてた。</p>
+</div>
 <div class="highlight"><pre><span></span><code><span class="nt">strict</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
 </code></pre></div>
-
-
-<h2>Links to this page</h2><ul><li><a href="../index.html">KuretaNone.netへようこそ</a></li></ul>
+<p><h2>Links to this page</h2><ul><li><a href="../index.html">KuretaNone.netへようこそ</a></li></ul></p>
 
 
 
@@ -2479,7 +2490,7 @@ INFO<span class="w">    </span>-<span class="w">  </span><span class="o">[</span
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="2025年6月3日 01:24:14 JST">2025年6月3日</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="2025年6月3日 01:30:38 JST">2025年6月3日</span>
   </span>
 
     
