@@ -1,4 +1,5 @@
 site_name: KuretaNone
+copyright: "&copy; 2025 KuretaNone"
 strict: false
 use_directory_urls: false
 site_url: https://kuretanone.net
@@ -26,6 +27,17 @@ theme:
         icon: material/weather-sunny
         name: ライトモードに切り替え
 
+extra:
+  homepage: https://KuretaNone.net
+  social:
+    - icon: fontawesome/brands/github
+      link: https://github.com/KuretaNone
+    - icon: fontawesome/brands/twitter
+      link: https://twitter.com/KuretaNone
+    - icon: fontawesome/brands/youtube
+      link: https://www.youtube.com/@KuretaNone
+  generator: false
+
 plugins:
   - obsidian-bridge
   - awesome-nav
@@ -42,6 +54,9 @@ plugins:
       enable_creation_date: true
       locale: ja
       timezone: Asia/Tokyo
+  - social:
+      cards_layout_options:
+        font_family: Noto Sans JP
 
 markdown_extensions:
   - footnotes
