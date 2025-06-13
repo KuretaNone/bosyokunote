@@ -5,6 +5,9 @@ use_directory_urls: false
 site_url: https://kuretanone.net
 theme:
   name: material
+  font:
+    text: Noto Sans JP
+    code: Source Code Pro
   favicon: https://pbs.twimg.com/profile_images/1861427904577708032/-ol_T5TU_400x400.jpg
   icon:
     logo: material/ghost
@@ -13,6 +16,7 @@ theme:
     - navigation.instant
     - navigation.instant.progress
     - content.code.copy
+    - header.autohide
   palette:
     - media: "(prefers-color-scheme: light)"
       scheme: default
@@ -74,3 +78,7 @@ markdown_extensions:
       custom_checkbox: true
   - pymdownx.tabbed:
       alternate_style: true
+  - pymdownx.blocks.caption
+
+extra_css:
+  - css/custom.css
