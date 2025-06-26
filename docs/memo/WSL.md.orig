@@ -1,0 +1,27 @@
+<<<<<<< HEAD
+---
+id: WSL
+aliases:
+  - WSL
+tags: []
+created: "2025-06-24"
+updated: "2025-06-24"
+---
+
+# WSL
+
+Windows Subsystem for Linuxの略称。  
+[[Windows]]上で[[Linux]]を動作させるための奴。
+
+=======
+---
+id: WSL
+aliases:
+  - WSL
+tags: []
+created: "2025-06-26"
+updated: "2025-06-26"
+---
+
+# WSL
+>>>>>>> 4549ba8453e332f2394fc9bc7084824859049fff
