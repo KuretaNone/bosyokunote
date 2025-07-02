@@ -4,7 +4,7 @@ aliases:
   - GitHub Actionsでデプロイを自動化する
 tags: []
 created: "2025-06-25"
-updated: "2025-06-25"
+updated: "2025-07-02"
 ---
 # GitHub Actionsでデプロイを自動化する
 
@@ -56,12 +56,10 @@ jobs:
         run: mkdocs gh-deploy --force
 ```
 
+以上の設定をすると、`main`ブランチにプッシュしたときに自動的にMkDocsのビルドが行われる。はず。
 
-以上の設定をすると、`main`ブランチにプッシュしたときに自動的にMkDocsのビルドとKuretaNone.netにデプロイが行われます。
-
-
+## とりあえずやってみよう。プッシュだプッシュ
 
 ## 参考リンク
-
 - [GitHub Actions を理解する](https://docs.github.com/ja/actions/about-github-actions/understanding-github-actions)
 - [Publushing your site](https://squidfunk.github.io/mkdocs-material/publishing-your-site/)
