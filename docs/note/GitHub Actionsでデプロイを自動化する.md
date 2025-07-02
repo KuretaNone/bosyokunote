@@ -59,6 +59,20 @@ jobs:
 以上の設定をすると、`main`ブランチにプッシュしたときに自動的にMkDocsのビルドが行われる。はず。
 
 ## とりあえずやってみよう。プッシュだプッシュ
+プッシュしました。( b1e663b3fb631e57302ef8b090a3855e15155638 )  
+![1751472553.png](res/1751472553.png)  
+
+どうやら失敗したみたいです。
+失敗原因は、actions/upload-artifact@v2 という GitHub Actions のアクションが非推奨（サポート終了）になったことが理由です。GitHub公式のアナウンスにも記載されています。
+ということで
+v3に更新。
+
+![1751473452.png](res/1751473452.png)
+また失敗だ！って思ったらこれは依存プラグインが足りないからですね。
+なので、`requirements.txt`を更新します。
+```txt
+mkdocs-material[imaging]"
+```
 
 ## 参考リンク
 - [GitHub Actions を理解する](https://docs.github.com/ja/actions/about-github-actions/understanding-github-actions)
