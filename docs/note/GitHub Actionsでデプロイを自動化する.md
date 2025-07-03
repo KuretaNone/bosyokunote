@@ -60,6 +60,8 @@ jobs:
 
 ## とりあえずやってみよう。プッシュだプッシュ
 プッシュしました。( b1e663b3fb631e57302ef8b090a3855e15155638 )  
+
+### Buildに失敗した
 ![1751472553.png](res/1751472553.png)  
 
 どうやら失敗したみたいです。
@@ -74,9 +76,14 @@ v3に更新。
 mkdocs-material[imaging]"
 ```
 
-今度はpipアップデートしろってさ
-![1751474052.png](res/1751474052.png)
+### 今度はDeployに失敗した
+人生と同じで一個解決したら次の問題が出て来ます。
+今度は`Deploy to GitHub Pages`のステップで失敗しました。
 
+![1751554178.png](res/1751554178.png)
+
+あ、これはもしかして、
+原因はなんでしょうなぁ
 ## 参考リンク
 - [GitHub Actions を理解する](https://docs.github.com/ja/actions/about-github-actions/understanding-github-actions)
 - [Publushing your site](https://squidfunk.github.io/mkdocs-material/publishing-your-site/)
