@@ -74,6 +74,9 @@ v3に更新。
 mkdocs-material[imaging]"
 ```
 
+今度はpipアップデートしろってさ
+![1751474052.png](res/1751474052.png)
+
 ## 参考リンク
 - [GitHub Actions を理解する](https://docs.github.com/ja/actions/about-github-actions/understanding-github-actions)
 - [Publushing your site](https://squidfunk.github.io/mkdocs-material/publishing-your-site/)
