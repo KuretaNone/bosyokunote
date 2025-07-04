@@ -4,61 +4,139 @@ aliases:
   - GitHub Actionsでデプロイを自動化する
 tags: []
 created: "2025-06-25"
-updated: "2025-07-02"
+updated: "2025-07-04"
 ---
-# GitHub Actionsでデプロイを自動化する
 
-[[GitHub Actions]]を使って、サイトのデプロイを自動化する方法について説明します。  
+# GitHub Actionsでデプロイを自動化する
+## カスタムドメインのサイトの更新を自動化した～～～い‼
+ということで、[[GitHub Actions]]を使って、サイトのデプロイを自動化する方法について説明します。  
 この辺のネタって死ぬほどこすられてるから、あまり需要はないかもしれませんが、いいんです。
 自分で調べて、やってみたいから、やる。そういうものです。
 
-## GitHub Actionsって何？
+> [!NOTE]
+> カスタムドメインを取得していなくても、[[GitHub Pages]]を使ってサイトを公開することはできます。
+> その場合は接続先の止め任が`<username>.github.io`のような形になります。
 
-[[CI]]/[[CD]]のプラットフォームで、[[リポジトリ]]に対して、ちょっとコードを管理、提供していくうえで便利な機能が集まっているという印象です。
+## 前提の環境
+- 独自ドメインを取得している
+- [[GitHub]]にリポジトリを作成している
+- [[MkDocs]]を使ってサイトを作成している
+- [[Material for MkDocs]]を使ってサイトを作成している
+
+## GitHub Actionsって何？
+[[CI]]/[[CD]]のプラットフォームで、[[リポジトリ]]に対して、ちょっとコードを管理、提供していくうえで便利な機能が集まってます！
 
 ## 自分のサイトの更新について
-
 自分のサイトは[[MkDocs]]を使って作成しています。  
 概要自体は[[MkDocsを使ってサイトを作る]]に書いています。  
-ここでは、最終成果物である[[Markdown]]を`mkdocd build` コマンドを叩いて生成した`site`ディレクトリを
-[[WinScp]]を使って[[サーバー]]と接続して、`public_html`ディレクトリにアップロードしています。
 
-さすがに毎回手動でビルドして、アップロードするのが大変です。  
-なにより、[[Material for MkDocs]]には[[GitHub Actions]]のテンプレートが用意されているので、これを使わない手はありません。
+ステップだけで言うと以下のような流れです。
+
+1. [[MkDocs]]で記事や[[PKM]]を作成
+1. 作成した[[Markdown]]を`mkdocs build`コマンドでビルド
+2. `site`ディレクトリに出力された[[HTML]]ファイルを[[WinScp]]を使って[[サーバー]]にアップロード
+
+ここでめんどくさいのが、毎回手動でビルドして、アップロードすることです。(つまりは全部)  
+そして何より、[[Material for MkDocs]]には[[GitHub Actions]]のテンプレートが用意されている(!?)ので、これを使わない手はないです。
+
+> [!NOTE]
+> [[生き恥をさらす場所を作ろう]]や、[[MkDocsを使ってサイトを作る]]を執筆していた当時は上記の機能を知らなかったので、手動でビルドしていました。
+> ついで言うと今回でデプロイを自動化した際に、契約している[[サーバー]]がいらないことに気づきました。
+> 必要なのでドメインの取得だけなので、静的サイトを作るだけなら[[サーバー]]は不要です。[[ドメイン]]だけで十分です。
+> やらかしたなぁ...。でもこういう失敗も必要だと思ってます。あるものを使っていきたいのでサーバーは別の何かに使います。
+> WordPressとか、いれてインターネット黎明期のようなサイトを作るのも面白いかもしれません。
 
 早速設定をしていきましょう。
 
-## GitHub Actionsの設定
+## GitHub Pagesの設定
 
-`.github/workflows/deploy.yml`というファイルを作成します。 
-以下の内容を記述します。
-```yaml
-name : Deploy to Server
-on:
-  push:
-    branches:
-      - main
-jobs:
-  deploy:
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v2
-      - uses: actions/setup-python@v2
-        with:
-          python-version: '3.10.8'
-      - name: Install requirements
-        run: 
-          python -m pip install --upgrade pip
-          pip install mkdocs-material
-      - name: Build MkDocs
-        run: mkdocs build --verbose --clean
-      - name: Deploy to GitHub Pages
-        run: mkdocs gh-deploy --force
+まずは[[GitHub Pages]]の設定を行います。  
+[[GitHub Pages]]の設定は、ホストするたリポジトリの`Settings->Pages`から行います。
+
+### Build and deployment
+1. `Source`を`Deploy from a branch`に設定します。
+2. `Branch`を`gh-pages`に設定します。
+
+### Custom domain
+1. `Custom domain`に自分のドメインを入力します。
+2. Saveボタンを押します。
+2. しばらく待ちます。
+3. `Enforce HTTPS`にチェックを入れます。
+
+![1751646994.png](res/1751646994.png)
+/// caption
+最終的にはこのような感じ
+///
+
+## DNSの設定
+[[GitHub Pages]]の設定が完了したら、次は[[DNS]]の設定を行います。  
+
+### CNAMEファイルの確認
+さっきの設定がうまくできていれば自分のリポジトリに`CNAME`というファイルが作成されているはずです。
+> [!NOTE]
+> なくてもOK,もしない場合は自分で作成してください。
+
+`CNAME`ファイルにはさっき設定したドメインが記載されているはずです。
+    ```txt
+    notes.kuretanone.net
+    ```
+これを`docs`ディレクトリに配置しておきます。
+
+### DNSの設定 
+そのドメインを管理している[[DNS]]の設定画面に移動します。  
+`CNAME`レコードを追加します。  
+
+[[XServer]]を利用している場合は、以下のように設定します。
+
+| 項目 | 入力内容 |
+| --- | --- |
+| ホスト名 | notes.kuretanone.net |
+| 種別 | CNAME |
+| 内容 | KuretaNone.github.io |
+
+![1751646641.png](res/1751646641.png)
+
+## GitHub Actionsの設定
+あとちょっとです‼  
+先述の通り、[[Material for MkDocs]]には[[GitHub Actions]]を利用して、[[GitHub Pages]]に[[デプロイ]]するための資料([Publishing your site](https://squidfunk.github.io/mkdocs-material/publishing-your-site/))が用意されています。
+
+まずはサイトの通り `.github/workflows/ci.yml`というファイルを作成します。 
+サイトに記載している内容をそのままコピペすると、プラグインをインストールするステップが抜けているので、 以下のように修正します。
+
+> [!NOTE]
+> ほかにも+マークがついてある部分で、補足が必要なことが書いてあります。(下記もその一つです。)
+
+```diff
+- - run: pip install mkdocs-material 
++ - run: pip install --upgrade pip
++ - run: pip install -r requirements.txt
 ```
 
-以上の設定をすると、`main`ブランチにプッシュしたときに自動的にMkDocsのビルドが行われる。はず。
+事前に、`requirements.txt`というファイルが必要なのですが、これはサイトのbuildに必要なプラグインを記載すればいいです。
+[[MkDocsを使ってサイトを作る]]を読んで？作業をしてる人はもうすでにあると思います。
 
-## とりあえずやってみよう。プッシュだプッシュ
+さぁ、 以上の設定をすると、`main`ブランチにプッシュしたときに自動的にMkDocsのビルドが行われます。
+
+ビルドに成功すると、`gh-pages`ブランチにビルドされたサイトがアップロードされます。
+
+> [!NOTE]
+> 手動でも`mkdocs gh-deploy`コマンドを実行することで、`gh-pages`ブランチにビルドされたサイトをアップロードすることもできます。
+
+![1751647798.png](res/1751647798.png)
+
+## まとめ
+
+これで、[[GitHub Actions]]を使って、[[MkDocs]]で作成したサイトを[[GitHub Pages]]を利用してカスタムドメインにデプロイすることができるようになりました。  
+これにより、サイトの更新が自動化され、手動でビルドやアップロードを行う必要がなくなります。  
+プッシュのタイミングによっては、更新途中の記事が公開されたりするデメリットもありますが、(今回の記事はまさにそれ) 
+
+**自動化**という素晴らしい響きがあるので今回は採用を選択しました。
+
+## 裏話
+上ではああしろだのこうしろだの言ってますが、実際にやってみるといろいろと問題が出てきます。
+何もわからずAIにci.ymlを作成してもらいましたが、うまくいきませんでした。
+
+### とりあえずやってみよう。プッシュだプッシュ
 プッシュしました。( b1e663b3fb631e57302ef8b090a3855e15155638 )  
 
 ### Buildに失敗した
@@ -72,8 +150,8 @@ v3に更新。
 ![1751473452.png](res/1751473452.png)
 また失敗だ！って思ったらこれは依存プラグインが足りないからですね。
 なので、`requirements.txt`を更新します。
-```txt
-mkdocs-material[imaging]"
+```diff
++ mkdocs-material[imaging]
 ```
 
 ### 今度はDeployに失敗した
@@ -82,8 +160,19 @@ mkdocs-material[imaging]"
 
 ![1751554178.png](res/1751554178.png)
 
-あ、これはもしかして、
-原因はなんでしょうなぁ
+こんな感じです。
+
+他にも
+- DNSの設定がうまくいかない
+- ほかのサイトを見てもAレコードを設定しろといわれるが具体的な値がわからない
+等の問題があり、Link to this pageを見てもらえればわかる通り、結構時間がかかりました。(日にちまたいでるのもあるけど)
+
+最終的には、参考リンクを読んで解決したのでやはり信頼できるのは1次情報や、公式のドキュメントですね。  
+僕はドキュメントを読めない病気みたいなのにかかっていて、素人のテックブログを読んでしまうことが多いです。  
+
+猛省
+
 ## 参考リンク
-- [GitHub Actions を理解する](https://docs.github.com/ja/actions/about-github-actions/understanding-github-actions)
-- [Publushing your site](https://squidfunk.github.io/mkdocs-material/publishing-your-site/)
+- https://docs.github.com/ja/actions/about-github-actions/understanding-github-actions
+- https://squidfunk.github.io/mkdocs-material/publishing-your-site/
+- https://www.mkdocs.org/user-guide/deploying-your-docs/#custom-domains
