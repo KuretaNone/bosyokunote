@@ -1,12 +1,14 @@
 ---
 id: PKM
-aliases:
-  - PKM
+aliases: []
 tags: []
 created: "2025-05-28"
 updated: "2025-05-28"
 ---
 
-# PKM
+personal knowledge managementの略
 
-Personal Knowledge Managementの略で、個人の知識を管理のこと。
+個人の知識管理に関するシステムや方法論
+
+
+方法論には[[Zettelkasten]]等がある

@@ -1,12 +1,12 @@
 ---
-id: vim
+id: Vim
 aliases:
-  - vim
-tags:
-  - vim
-created: "2025-05-28"
-updated: "2025-05-28"
+  - Vim
+tags: []
+created: 2025-07-18
+updated: 2025-07-18
 ---
+
 
 # vim
 

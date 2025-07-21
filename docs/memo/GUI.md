@@ -3,9 +3,10 @@ id: GUI
 aliases:
   - GUI
 tags: []
-created: "2025-06-02"
-updated: "2025-06-02"
+created: 2025-07-20
+updated: 2025-07-20
 ---
+
 
 # GUI
 
