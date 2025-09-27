@@ -3,8 +3,8 @@ id: obsidian.nvim
 aliases:
   - obsidian.nvim
 tags: []
-created: "2025-06-01"
-updated: "2025-06-01"
+created: 2025-06-01
+updated: 2025-06-01
 ---
 
 # obsidian.nvim
