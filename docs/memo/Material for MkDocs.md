@@ -3,8 +3,8 @@ id: Material for MkDocs
 aliases:
   - Material for MkDocs
 tags: []
-created: "2025-06-08"
-updated: "2025-06-08"
+created: 2025-06-08
+updated: 2025-06-08
 ---
 
 # Material for MkDocs
