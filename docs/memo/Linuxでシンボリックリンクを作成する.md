@@ -11,9 +11,9 @@ updated: 2025-10-25
 [[Linux]]で[[シンボリックリンク]]を作成するには`ln -s`コマンドを使用する
 
 ```
-ln -s 元のファイル 参照先のファイル
+ln -s 参照元のファイル(ディレクトリ) 参照先を作成するディレクトリ
 ```
 
 ```
-ln -s /path/to/original/dir /path/to/link/dir
+ln -s ~/dotfiles/.bashrc ~/
 ```

@@ -3,8 +3,8 @@ id: Claude Codeのインストール
 aliases:
   - Claude Codeのインストール
 tags: []
-created: "2025-06-20"
-updated: "2025-06-20"
+created: 2025-06-20
+updated: 2025-06-20
 ---
 
 # Claude Codeのインストール
