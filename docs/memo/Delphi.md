@@ -4,7 +4,7 @@ aliases:
   - Delphi
 tags: []
 created: 2025-06-24
-updated: 2025-07-18
+updated: 2025-11-03
 ---
 
 # Delphi
@@ -13,4 +13,4 @@ updated: 2025-07-18
 
 [[Windows]]、[[Linux]]、[[MacOS]]等のデスクトップや、[[iOS]]、[[Android]]のクロスプラットフォームを単一のコードベースで開発ができる。
 
-最新はDelphi 12.3 Athens
+最新はDelphi13

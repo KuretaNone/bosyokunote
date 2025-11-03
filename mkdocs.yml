@@ -42,6 +42,10 @@ extra:
       link: https://www.youtube.com/@KuretaNone
   generator: false
 
+exclude_docs: |
+  /daily/
+
+
 plugins:
   - obsidian-bridge
   - awesome-nav
