@@ -11,7 +11,7 @@ updated: 2025-09-23
 - [ ] (B) 2025-10-26 Obsidian.nvimの設定を見直す +nvim @config
 - [ ] (A) 2025-10-26 [[ホームページを作ろう]] +develop
 - [ ] [[NeovimでAIチャットを追加する]]
-- [ ] rename コマンドが上手く動作しない
+- [x] rename コマンドが上手く動作しない
 - [ ] taskは未完了と完了だけのステータスにする。
 - [ ] snacks.pickerの表示順をファイルの作成順にしたい
 - [ ] note-KHR全巻考察

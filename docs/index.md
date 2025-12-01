@@ -17,6 +17,8 @@ updated: 2025-05-28
 
 ## 最近作成した記事
 
+- [[TypeScriptで実行した結果をGithub Actionに渡す]]
+- [[TypeScriptの開発環境構築]]
 - [[2025-11-02 VimConf 2025 Small]]
 - [[AHKでHHKBのキーマップを作成する]]
 - [[2025-09-18 XP2500を目指す]]
