@@ -15,6 +15,7 @@ updated: 2025-09-23
 ## ソフト
 
 ## Neovim
+- [ ] vimで開いていたディレクトリを表示する。
 - [ ] [[NeovimでAIチャットを追加する]]
 
 ### [[obsidian.nvim]]
