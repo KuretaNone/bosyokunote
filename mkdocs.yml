@@ -2,7 +2,7 @@ site_name: KuretaNone
 copyright: "&copy; 2025 KuretaNone"
 strict: false
 use_directory_urls: false
-site_url: https://kuretanone.net
+site_url: https://notes.kuretanone.net
 theme:
   name: material
   font:
